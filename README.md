@@ -1,3 +1,3 @@
 # Challenge_ML
 
-La solución se realizó en MySQL.
+La solución se realizó con lenguaje MySQL.

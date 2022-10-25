@@ -1,4 +1,4 @@
-/*Listar los usuarios que cumplan aÒos el dÌa de hoy cuya cantidad de ventas realizadas en enero 2020 sea superior a 1500. */
+/*Listar los usuarios que cumplan a√±os el d√≠a de hoy cuya cantidad de ventas realizadas en enero 2020 sea superior a 1500. */
 SELECT 	 O.IDENTIFICACION_VENDEDOR
 		,C.NOMBRE
 		,C.APELLIDO 
@@ -12,13 +12,13 @@ AND DATE(O.FVENTA) BETWEEN '20220101' AND '20220131'
 group by O.IDENTIFICACION_VENDEDOR
 		,C.NOMBRE
 		,C.APELLIDO 
-having SUM(O.CANTIDAD) > 1/* 1500 */
+having SUM(O.CANTIDAD) > 1500
 order by CANT_VENTAS desc
 
 
 
 
-/*Por cada mes del 2020, se solicita el top 5 de usuarios que m·s vendieron($) en la categorÌa CELULARES. Se requiere el mes y aÒo de an·lisis,
+/*Por cada mes del 2020, se solicita el top 5 de usuarios que m√°s vendieron($) en la categor√≠a CELULARES. Se requiere el mes y a√±o de an√°lisis,
  nombre y apellido del vendedor, cantidad de ventas realizadas, cantidad de productos vendidos y el monto total transaccionado.*/
 
 select mes,anio, nombre, apellido, CANT_VENTAS,CANT_PRODUCTOS_VENDIDOS,TOTAL_TRANSACCIONADO, RANKING
@@ -54,10 +54,10 @@ GO
 
 
 /*
-Se solicita poblar una nueva tabla con el precio y estado de los Õtems a fin del dÌa.
+Se solicita poblar una nueva tabla con el precio y estado de los √çtems a fin del d√≠a.
 Tener en cuenta que debe ser reprocesable. Vale resaltar que en la tabla Item,
-vamos a tener ˙nicamente el ˙ltimo estado informado por la PK definida. (Se puede
-resolver a travÈs de StoredProcedure)
+vamos a tener √∫nicamente el √∫ltimo estado informado por la PK definida. (Se puede
+resolver a trav√©s de StoredProcedure)
 */
 Create TABLE PRECIO_ESTADO_ITEMS(
 PRODUCTO VARCHAR (50),
